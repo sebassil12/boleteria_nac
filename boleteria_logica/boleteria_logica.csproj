@@ -42,8 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteLogica.cs" />
+    <Compile Include="FormaPagoLogica.cs" />
     <Compile Include="FechaTentativaLogica.cs" />
+    <Compile Include="PeliculaLogica.cs" />
+    <Compile Include="PrecioLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepartoLogica.cs" />
+    <Compile Include="SalaLogica.cs" />
+    <Compile Include="TrailerLogica.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\boleteria_acceso_datos\boleteria_acceso_datos.csproj">
