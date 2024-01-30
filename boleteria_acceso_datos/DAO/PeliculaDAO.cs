@@ -27,7 +27,7 @@ namespace boleteria_acceso_datos.DAO
 
             }catch(Exception ex)
             {
-                throw new Exception("Error al insertar Pelicula");
+                throw new Exception("Error al insertar Pelicula" + ex.Message);
             }
         }
 
