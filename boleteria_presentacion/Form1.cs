@@ -33,8 +33,14 @@ namespace boleteria_presentacion
                     FrmCliente frmCliente = new FrmCliente();
                     frmCliente.ShowDialog();
                     CmbMain.SelectedIndex = -1;
-                    
                     break;
+                case "Encargado":
+                    FrmEncargado frmEncargado = new FrmEncargado();
+                    frmEncargado.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+
+
             }
 
         }

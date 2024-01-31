@@ -21,7 +21,8 @@ namespace boleteria_acceso_datos.DAO
             try
             {
                 ejecutarSql.CommandText = "insert into fecha_tentativa(fecha) values" +
-                    "('" + fechaTentativa.Fecha + ejecutarSql.ExecuteNonQuery();
+                    "('" + fechaTentativa.Fecha + "')";
+                    ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConexion();
 
             }catch(Exception ex)

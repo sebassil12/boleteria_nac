@@ -52,11 +52,23 @@
     <Compile Include="Entidades\Procesos\FrmProcesoCliente.Designer.cs">
       <DependentUpon>FrmProcesoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoEncargado.Designer.cs">
+      <DependentUpon>FrmProcesoEncargado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Vista\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entidades\Vista\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmEncargado.Designer.cs">
+      <DependentUpon>FrmEncargado.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -69,8 +81,14 @@
     <EmbeddedResource Include="Entidades\Procesos\FrmProcesoCliente.resx">
       <DependentUpon>FrmProcesoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoEncargado.resx">
+      <DependentUpon>FrmProcesoEncargado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entidades\Vista\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmEncargado.resx">
+      <DependentUpon>FrmEncargado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
