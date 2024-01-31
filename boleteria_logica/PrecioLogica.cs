@@ -12,15 +12,27 @@ namespace boleteria_logica
     public class PrecioLogica
     {
         private PrecioDAO precioDAO = new PrecioDAO();
-        public int InsertarPrecio(Precio precio)
+        public void InsertarPrecio(Precio precio)
         {
             precioDAO.InsertarPrecio(precio);
-            DataTable resultado = precioDAO.BuscarPrecio(precio.Fecha);
-            return int.Parse(resultado.Rows[0]["idPrecio"].ToString());
+
         }
         public DataTable ListarPrecio()
         {
             return precioDAO.ListarPrecio();
+        }
+
+        public Precio ObtenerUnPrecio(int Id)
+        {
+            return precioDAO.ObtenerUnPrecio(Id);
+        }
+        public void ActualizarPrecio(Precio precio, int Id)
+        {
+            precioDAO.ActualizarPrecio(precio, Id);
+        }
+        public void EliminarPrecio(int Id)
+        {
+            precioDAO.EliminarPrecio(Id);
         }
     }
 }

@@ -20,9 +20,9 @@ namespace boleteria_acceso_datos.DAO
             ejecutarSql.Connection = conexion.AbrirConexion();
             try
             {
-                ejecutarSql.CommandText = "insert into trailer(trailer)" +
-                    "values('" + trailer.LinkTrailer +
-                    ejecutarSql.ExecuteNonQuery();
+                ejecutarSql.CommandText = "insert into trailer(trailer) values (@trailer)";
+                ejecutarSql.Parameters.AddWithValue("@trailer", trailer.LinkTrailer);
+                ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConexion();
             }
             catch (Exception ex)
@@ -66,6 +66,68 @@ namespace boleteria_acceso_datos.DAO
             catch (Exception ex)
             {
                 throw new Exception("Error al buscar trailer: " + ex.Message);
+            }
+        }
+        public Trailer ObtenerUnTrailer(int Id)
+        {
+
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "SELECT * FROM trailer WHERE id_trailer = " + Id;
+                transaccion = ejecutarSql.ExecuteReader();
+
+                transaccion.Read();
+
+                Trailer trailer = new Trailer();
+                trailer.IdTrailer = transaccion.GetInt32(0);
+                trailer.LinkTrailer = transaccion.GetString(1);
+                transaccion.Close();
+                conexion.CerrarConexion();
+
+                return trailer;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el trailer: " + ex.Message);
+            }
+
+        }
+
+        public void ActualizarTrailer(Trailer actualizarTrailer, int Id)
+        {
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "UPDATE trailer SET trailer = @trailer " +
+                    "WHERE id_trailer = @id_trailer";
+
+                ejecutarSql.Parameters.AddWithValue("@trailer", actualizarTrailer.LinkTrailer);
+                ejecutarSql.Parameters.AddWithValue("@id_trailer", Id);
+
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar trailer: " + ex.Message);
+            }
+        }
+        public void EliminarTrailer(int Id)
+        {
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "DELETE FROM trailer WHERE id_trailer = @id_trailer_eliminar";
+                ejecutarSql.Parameters.AddWithValue("@id_trailer_eliminar", Id);
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar trailer : " + ex.Message);
             }
         }
     }

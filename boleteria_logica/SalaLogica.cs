@@ -12,15 +12,27 @@ namespace boleteria_logica
     public class SalaLogica
     {
         private SalaDAO salaDAO = new SalaDAO();
-        public int InsertarSala(Sala sala)
+        public void InsertarSala(Sala sala)
         {
             salaDAO.InsertarSala(sala);
-            DataTable resultado = salaDAO.BuscarSala(sala.NumeroSala);
-            return int.Parse(resultado.Rows[0]["idSala"].ToString());
+            
         }
         public DataTable ListarSala()
         {
             return salaDAO.ListarSala();
+        }
+
+        public Sala ObtenerUnaSala(int Id)
+        {
+            return salaDAO.ObtenerUnaSala(Id);
+        }
+        public void ActualizarSala(Sala sala, int Id)
+        {
+            salaDAO.ActualizarSala(sala, Id);
+        }
+        public void EliminarSala(int Id)
+        {
+            salaDAO.EliminarSala(Id);
         }
     }
 }

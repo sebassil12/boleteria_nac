@@ -11,7 +11,7 @@ namespace boleteria_acceso_datos.bolteria_tablas
         public int IdFormaPago { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public bool Estado { get; set; }   
+        public byte Estado { get; set; }   
         
     }
 }

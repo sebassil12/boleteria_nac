@@ -36,7 +36,8 @@
             // 
             this.CmbMain.FormattingEnabled = true;
             this.CmbMain.Items.AddRange(new object[] {
-            "Cliente", "Encargado"});
+            "Cliente", "Cliente_Estreno","Descripcion_Entrada","Encargado", "Entrada" ,
+            "Estreno", "Fecha Tentativa", "Forma Pago", "Pelicula", "Precio", "Reparto", "Sala","Trailer"});
             this.CmbMain.Location = new System.Drawing.Point(147, 58);
             this.CmbMain.Name = "CmbMain";
             this.CmbMain.Size = new System.Drawing.Size(121, 21);

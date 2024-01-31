@@ -12,15 +12,27 @@ namespace boleteria_logica
     public class PeliculaLogica
     {
         private PeliculaDAO peliculaDAO = new PeliculaDAO();
-        public int InsertarPelicula(Pelicula pelicula)
+        public void InsertarPelicula(Pelicula pelicula)
         {
             peliculaDAO.InsertarPelicula(pelicula);
-            DataTable resultado = peliculaDAO.BuscarPelicula(pelicula.Nombre);
-            return int.Parse(resultado.Rows[0]["idPelicula"].ToString());
+
         }
         public DataTable ListarPelicula()
         {
             return peliculaDAO.ListarPelicula();
+        }
+
+        public Pelicula ObtenerUnaPelicula(int Id)
+        {
+            return peliculaDAO.ObtenerUnaPelicula(Id);
+        }
+        public void ActualizarPelicula(Pelicula pelicula, int Id)
+        {
+            peliculaDAO.ActualizarPelicula(pelicula, Id);
+        }
+        public void EliminarPelicula(int Id)
+        {
+            peliculaDAO.EliminarPelicula(Id);
         }
     }
 }

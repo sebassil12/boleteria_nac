@@ -20,8 +20,9 @@ namespace boleteria_acceso_datos.DAO
             ejecutarSql.Connection = conexion.AbrirConexion();
             try
             {
-                ejecutarSql.CommandText = "insert into fecha_tentativa(fecha) values" +
-                    "('" + fechaTentativa.Fecha + "')";
+                ejecutarSql.CommandText = "INSERT into fecha_tentativa(fecha) VALUES (@fecha)";
+
+                ejecutarSql.Parameters.AddWithValue("@fecha", fechaTentativa.Fecha);
                     ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConexion();
 
@@ -67,6 +68,69 @@ namespace boleteria_acceso_datos.DAO
                 throw new Exception("Error al listar encargado: " + ex.Message);
             }
         }
+        public FechaTentativa ObtenerUnaFechaTentativa(int Id)
+        {
+
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "SELECT * FROM fecha_tentativa WHERE id_fecha_tentativa = " + Id;
+                transaccion = ejecutarSql.ExecuteReader();
+
+                transaccion.Read();
+
+                FechaTentativa fechaTentativa = new FechaTentativa();
+                fechaTentativa.IdFechaTentativa = transaccion.GetInt32(0);
+                fechaTentativa.Fecha = transaccion.GetDateTime(1);
+                transaccion.Close();
+                conexion.CerrarConexion();
+
+                return fechaTentativa;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener la fecha tentativa: " + ex.Message);
+            }
+
+        }
+
+        public void ActualizarFechaTentativa(FechaTentativa actualizarFechaTentativa, int Id)
+        {
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "UPDATE fecha_tentativa SET fecha = @fecha " +
+                "WHERE id_fecha_tentativa = @id_fecha_tentativa";
+
+                ejecutarSql.Parameters.AddWithValue("@fecha", actualizarFechaTentativa.Fecha);
+                ejecutarSql.Parameters.AddWithValue("@id_fecha_tentativa", Id);
+
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar fecha tentativa: " + ex.Message);
+            }
+        }
+            public void EliminarFechaTentativa(int Id)
+            {
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "DELETE FROM fecha_tentativa WHERE id_fecha_tentativa = @id_fecha_eliminar";
+                ejecutarSql.Parameters.AddWithValue("@id_fecha_eliminar", Id);
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar fecha_tentativa: " + ex.Message);
+            }
+            }
+        
 
     }
 }

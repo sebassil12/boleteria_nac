@@ -20,8 +20,13 @@ namespace boleteria_acceso_datos.DAO
             ejecutarSql.Connection = conexion.AbrirConexion();
             try
             {
-            ejecutarSql.CommandText = "insert into pelicula(nombre, duracion, anio, clasificacion, id_encargado, id_sala)" +
-                "values('" + pelicula.Nombre + "','" + pelicula.Duracion + "','" + pelicula.Clasificacion + "','" + pelicula.IdEncargado + "','" + pelicula.IdSala +
+                ejecutarSql.CommandText = "insert into pelicula(nombre, duracion, anio, clasificacion, id_encargado, id_sala) values (@nombre, @duracion, @anio, @clasificacion, @id_encargado, @id_sala)";
+                ejecutarSql.Parameters.AddWithValue("@nombre", pelicula.Nombre);
+                ejecutarSql.Parameters.AddWithValue("@duracion", pelicula.Duracion);
+                ejecutarSql.Parameters.AddWithValue("@anio", pelicula.Anio);
+                ejecutarSql.Parameters.AddWithValue("@clasificacion", pelicula.Clasificacion);
+                ejecutarSql.Parameters.AddWithValue("@id_encargado", pelicula.IdEncargado);
+                ejecutarSql.Parameters.AddWithValue("@id_sala", pelicula.IdSala);
                 ejecutarSql.ExecuteNonQuery();
                 conexion.CerrarConexion();
 
@@ -65,6 +70,84 @@ namespace boleteria_acceso_datos.DAO
             }catch(Exception ex)
             {
                 throw new Exception("Error al buscar pelicula: " + ex.Message);
+            }
+        }
+
+        public Pelicula ObtenerUnaPelicula(int Id)
+        {
+
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "SELECT * FROM pelicula WHERE id_pelicula = " + Id;
+                transaccion = ejecutarSql.ExecuteReader();
+
+                transaccion.Read();
+
+                Pelicula pelicula = new Pelicula();
+                pelicula.IdPelicula = transaccion.GetInt32(0);
+                pelicula.Nombre = transaccion.GetString(1);
+                pelicula.Duracion = transaccion.GetTimeSpan(2);
+                pelicula.Anio = transaccion.GetInt32(3);
+                pelicula.Clasificacion = transaccion.GetString(4);
+                pelicula.IdEncargado = transaccion.GetInt32(5);
+                pelicula.IdPelicula = transaccion.GetInt32(6);
+                transaccion.Close();
+                conexion.CerrarConexion();
+
+                return pelicula;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener la pelicula: " + ex.Message);
+            }
+
+        }
+
+        public void ActualizarPelicula(Pelicula actualizarPelicula, int Id)
+        {
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "UPDATE pelicula SET nombre = @nombre, " +
+                    "duracion = @duracion, " +
+                    "anio = @anio, " +
+                    "clasificacion = @clasificacion, " +
+                    "id_encargado = @id_encargado, "+
+                    "id_sala = @id_sala "+
+                    "WHERE id_pelicula = @id_pelicula";
+
+                ejecutarSql.Parameters.AddWithValue("@nombre", actualizarPelicula.Nombre);
+                ejecutarSql.Parameters.AddWithValue("@duracion", actualizarPelicula.Duracion);
+                ejecutarSql.Parameters.AddWithValue("@anio", actualizarPelicula.Anio);
+                ejecutarSql.Parameters.AddWithValue("@clasificacion", actualizarPelicula.Clasificacion);
+                ejecutarSql.Parameters.AddWithValue("@id_encargado", actualizarPelicula.IdEncargado);
+                ejecutarSql.Parameters.AddWithValue("@id_sala", actualizarPelicula.IdSala);
+                ejecutarSql.Parameters.AddWithValue("@id_pelicula", Id);
+
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar pelicula: " + ex.Message);
+            }
+        }
+        public void EliminarPelicula(int Id)
+        {
+            try
+            {
+                ejecutarSql.Connection = conexion.AbrirConexion();
+                ejecutarSql.CommandText = "DELETE FROM pelicula WHERE id_pelicula = @id_pelicula";
+                ejecutarSql.Parameters.AddWithValue("@id_pelicula", Id);
+                ejecutarSql.ExecuteNonQuery();
+                conexion.CerrarConexion();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar pelicula: " + ex.Message);
             }
         }
 

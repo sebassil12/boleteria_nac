@@ -12,15 +12,26 @@ namespace boleteria_logica
     public class TrailerLogica
     {
         private TrailerDAO trailerDAO = new TrailerDAO();
-        public int InsertarTrailer(Trailer trailer)
+        public void InsertarTrailer(Trailer trailer)
         {
             trailerDAO.InsertarTrailer(trailer);
-            DataTable resultado = trailerDAO.BuscarTrailer(trailer.LinkTrailer);
-            return int.Parse(resultado.Rows[0]["idTrailer"].ToString());
+            
         }
         public DataTable ListarTrailer()
         {
             return trailerDAO.ListarTrailer();
+        }
+        public Trailer ObtenerUnTrailer(int Id)
+        {
+            return trailerDAO.ObtenerUnTrailer(Id);
+        }
+        public void ActualizarTrailer(Trailer trailer, int Id)
+        {
+            trailerDAO.ActualizarTrailer(trailer, Id);
+        }
+        public void EliminarTrailer(int Id)
+        {
+            trailerDAO.EliminarTrailer(Id);
         }
     }
 }

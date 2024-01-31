@@ -13,15 +13,28 @@ namespace boleteria_logica
     {
         private FechaTentativaDAO fechaTentativaDAO = new FechaTentativaDAO();
 
-        public int InsertarFechaTentativa(FechaTentativa fechaTentativa)
+        public void InsertarFechaTentativa(FechaTentativa fechaTentativa)
         {
             fechaTentativaDAO.InsertarFechaTentativa(fechaTentativa);
-            DataTable resultado = fechaTentativaDAO.BuscarFechaTentativa(fechaTentativa.Fecha);
-            return int.Parse(resultado.Rows[0]["idFechaTentativa"].ToString());
+  
         }
         public DataTable ListarFechaTentativa()
         {
             return fechaTentativaDAO.ListarFechaTentativa();
+        }
+
+        public void ActualizarFechaTentativa(FechaTentativa fechaTentativa, int Id)
+        {
+            fechaTentativaDAO.ActualizarFechaTentativa(fechaTentativa, Id);
+        }
+
+        public FechaTentativa ObtenerUnaFechaTentativa(int Id)
+        {
+            return fechaTentativaDAO.ObtenerUnaFechaTentativa(Id);
+        }
+        public void EliminarFechaTentativa(int Id)
+        {
+            fechaTentativaDAO.EliminarFechaTentativa(Id);
         }
     }
 }

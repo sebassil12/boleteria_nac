@@ -39,8 +39,37 @@ namespace boleteria_presentacion
                     frmEncargado.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
+                //Insertar los casos restantes
+                case "Fecha Tentativa":
+                    FrmFechaTentativa frmFechaTentativa = new FrmFechaTentativa();
+                    frmFechaTentativa.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Forma Pago":
+                    FrmFormaPago frmFormaPago = new FrmFormaPago();
+                    frmFormaPago.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Pelicula":
 
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Precio":
 
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Reparto":
+
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Sala":
+
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Trailer":
+
+                    CmbMain.SelectedIndex = -1;
+                    break;
             }
 
         }

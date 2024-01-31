@@ -12,15 +12,26 @@ namespace boleteria_logica
     public class RepartoLogica
     {
         private RepartoDAO repartoDAO = new RepartoDAO();
-        public int InsertarReparto(Reparto reparto)
+        public void InsertarReparto(Reparto reparto)
         {
             repartoDAO.InsertarReparto(reparto);
-            DataTable resultado = repartoDAO.BuscarReparto(reparto.Nombre);
-            return int.Parse(resultado.Rows[0]["idReparto"].ToString());
+     
         }
         public DataTable ListarReparto()
         {
             return repartoDAO.ListarReparto();
+        }
+        public Reparto ObtenerUnReparto(int Id)
+        {
+            return repartoDAO.ObtenerUnReparto(Id);
+        }
+        public void ActualizarReparto(Reparto reparto, int Id)
+        {
+            repartoDAO.ActualizarReparto(reparto, Id);
+        }
+        public void EliminarReparto(int Id)
+        {
+            repartoDAO.EliminarReparto(Id);
         }
     }
 }
