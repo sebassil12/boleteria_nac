@@ -14,15 +14,29 @@ namespace boleteria_logica
 
         private ClienteDAO clienteDAO = new ClienteDAO();
         
-        public int InsertarCliente(Cliente cliente)
+        public void InsertarCliente(Cliente cliente)
         {
             clienteDAO.InsertarCliente(cliente);
-            DataTable resultado = clienteDAO.BuscarCliente(cliente.CiRuc);
-            return int.Parse(resultado.Rows[0]["idCliente"].ToString());
+       
         }
         public DataTable ListarCliente()
         {
             return clienteDAO.ListarCliente();
+        }
+
+        public void ActualizarCliente(Cliente cliente, int Id)
+        {
+            clienteDAO.ActualizarCliente(cliente, Id);
+        }
+
+        public Cliente ObtenerUnCliente(int Id)
+        {
+            return clienteDAO.ObtenerUnCliente(Id);
+        }
+
+        public void EliminarCliente(int Id)
+        {
+            clienteDAO.EliminarCliente(Id);
         }
     }
 }

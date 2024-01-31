@@ -1,5 +1,6 @@
 ﻿using boleteria_acceso_datos.bolteria_tablas;
 using boleteria_acceso_datos.DAO;
+using boleteria_logica;
 using boleteria_presentacion.Entidades.Vista;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace boleteria_presentacion.Entidades.Procesos
 {
     public partial class FrmProcesoCliente : Form
     {
-        private ClienteDAO clienteDAO = new ClienteDAO();
+        private ClienteLogica clienteLogica = new ClienteLogica();
         private int? Id;
 
         public FrmProcesoCliente(int? Id = null)
@@ -30,8 +31,8 @@ namespace boleteria_presentacion.Entidades.Procesos
 
         private void Load_Data()
         {
-            ClienteDAO clienteDAO = new ClienteDAO();
-            Cliente cliente = clienteDAO.ObtenerUnCliente((int)Id);
+            ClienteLogica clienteLogica = new ClienteLogica();
+            Cliente cliente = clienteLogica.ObtenerUnCliente((int)Id);
             TxtName.Text = cliente.Nombre;
             TxtLastname.Text = cliente.Apellido;
             TxtEmail.Text = cliente.Correo;
@@ -44,7 +45,7 @@ namespace boleteria_presentacion.Entidades.Procesos
         {          
             try
             {
-                clienteDAO.InsertarCliente(cliente);
+                clienteLogica.InsertarCliente(cliente);
             }catch(Exception ex)
             {
                 throw new Exception("Error al insertar cliente: " + ex.Message);
@@ -56,7 +57,7 @@ namespace boleteria_presentacion.Entidades.Procesos
         {
             try
             {
-                clienteDAO.ActualizarCliente(cliente, (int)Id);
+                clienteLogica.ActualizarCliente(cliente, (int)Id);
             }catch(Exception ex)
             {
                 throw new Exception("Error al actualizar cliente: " + ex.Message);

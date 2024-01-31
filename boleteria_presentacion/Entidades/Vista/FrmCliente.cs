@@ -1,4 +1,5 @@
 ﻿using boleteria_acceso_datos.DAO;
+using boleteria_logica;
 using boleteria_presentacion.Entidades.Procesos;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace boleteria_presentacion.Entidades.Vista
 {
     public partial class FrmCliente : Form
     {
-        private ClienteDAO clienteDAO = new ClienteDAO();
+        private ClienteLogica clienteLogica = new ClienteLogica();
         public FrmCliente()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace boleteria_presentacion.Entidades.Vista
 
         public void Refresh()
         {
-            DataTable dt = clienteDAO.ListarCliente();
+            DataTable dt = clienteLogica.ListarCliente();
 
             DgvCliente.DataSource = dt;
         }
@@ -70,7 +71,7 @@ namespace boleteria_presentacion.Entidades.Vista
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             int? Id = GetIdCliente();
-            clienteDAO.EliminarCliente((int) Id);
+            clienteLogica.EliminarCliente((int) Id);
             Refresh();
         }
     }
