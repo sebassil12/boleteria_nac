@@ -12,60 +12,60 @@ using System.Windows.Forms;
 
 namespace boleteria_presentacion.Entidades.Vista
 {
-    public partial class FrmPelicula : Form
+    public partial class FrmSala : Form
     {
-        private PeliculaLogica peliculaLogica = new PeliculaLogica();
-        public FrmPelicula()
+        SalaLogica salaLogica = new SalaLogica();
+        public FrmSala()
         {
             InitializeComponent();
         }
 
+        private new void Refresh() {
+            DataTable dt = salaLogica.ListarSala();
+            DgvSala.DataSource = dt;
+
+        }
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProcesoPelicula frmProcesoPelicula = new FrmProcesoPelicula();
-            frmProcesoPelicula.ShowDialog();
+            FrmProcesoSala frmProcesoSala = new FrmProcesoSala();
+            frmProcesoSala.ShowDialog();
             Refresh();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            int? Id = GetIdPelicula();
-            FrmProcesoPelicula frmProcesoPelicula = new FrmProcesoPelicula((int)Id);
-            frmProcesoPelicula.ShowDialog();
+            int? Id = GetIdSala();
+            FrmProcesoSala frmProcesoSala = new FrmProcesoSala((int)Id);
+            frmProcesoSala.ShowDialog();
             Refresh();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            int? Id = GetIdPelicula();
+            int? Id = GetIdSala();
             try
             {
-                peliculaLogica.EliminarPelicula((int)Id);
+                salaLogica.EliminarSala((int)Id);
             }catch(Exception ex)
             {
-                throw new Exception("Error al eliminar pelicula" + ex.Message);
+                throw new Exception("Error al eliminar la sala: "+ ex.Message);
             }
             Refresh();
         }
 
-        private void FrmPelicula_Load(object sender, EventArgs e)
+        private void FrmSala_Load(object sender, EventArgs e)
         {
+     
             Refresh();
         }
 
-        private new void Refresh()
-        {
-            DataTable dt = peliculaLogica.ListarPelicula();
-            DgvPelicula.DataSource = dt;
-        }
-
         #region HELPER
-        private int? GetIdPelicula()
+        private int? GetIdSala()
         {
             try
             {
 
-                return int.Parse(DgvPelicula.Rows[DgvPelicula.CurrentRow.Index].Cells[0].Value.ToString());
+                return int.Parse(DgvSala.Rows[DgvSala.CurrentRow.Index].Cells[0].Value.ToString());
             }
             catch
             {

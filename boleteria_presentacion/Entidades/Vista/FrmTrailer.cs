@@ -12,60 +12,60 @@ using System.Windows.Forms;
 
 namespace boleteria_presentacion.Entidades.Vista
 {
-    public partial class FrmPelicula : Form
+    public partial class FrmTrailer : Form
     {
-        private PeliculaLogica peliculaLogica = new PeliculaLogica();
-        public FrmPelicula()
+        TrailerLogica trailerLogica = new TrailerLogica();
+        public FrmTrailer()
         {
             InitializeComponent();
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProcesoPelicula frmProcesoPelicula = new FrmProcesoPelicula();
-            frmProcesoPelicula.ShowDialog();
+            FrmProcesoTrailer frmProcesoTrailer = new FrmProcesoTrailer();
+            frmProcesoTrailer.ShowDialog();
             Refresh();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            int? Id = GetIdPelicula();
-            FrmProcesoPelicula frmProcesoPelicula = new FrmProcesoPelicula((int)Id);
-            frmProcesoPelicula.ShowDialog();
+            int? Id = GetIdTrailer();
+            FrmProcesoTrailer frmProcesoTrailer = new FrmProcesoTrailer((int)Id);
+            frmProcesoTrailer.ShowDialog(); 
             Refresh();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            int? Id = GetIdPelicula();
+            int? Id = GetIdTrailer();
             try
             {
-                peliculaLogica.EliminarPelicula((int)Id);
+                trailerLogica.EliminarTrailer((int)Id);
             }catch(Exception ex)
             {
-                throw new Exception("Error al eliminar pelicula" + ex.Message);
+                throw new Exception("Error al eliminar Trailer: "+ ex.Message);
             }
             Refresh();
         }
 
-        private void FrmPelicula_Load(object sender, EventArgs e)
+        private void FrmTrailer_Load(object sender, EventArgs e)
         {
             Refresh();
         }
 
         private new void Refresh()
         {
-            DataTable dt = peliculaLogica.ListarPelicula();
-            DgvPelicula.DataSource = dt;
+            DataTable dt = trailerLogica.ListarTrailer();
+            DgvTrailer.DataSource = dt;
+
         }
 
         #region HELPER
-        private int? GetIdPelicula()
+        private int? GetIdTrailer()
         {
             try
             {
-
-                return int.Parse(DgvPelicula.Rows[DgvPelicula.CurrentRow.Index].Cells[0].Value.ToString());
+                return int.Parse(DgvTrailer.Rows[DgvTrailer.CurrentRow.Index].Cells[0].Value.ToString());
             }
             catch
             {

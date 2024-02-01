@@ -51,23 +51,28 @@ namespace boleteria_presentacion
                     CmbMain.SelectedIndex = -1;
                     break;
                 case "Pelicula":
-
+                    FrmPelicula frmPelicula = new FrmPelicula();
+                    frmPelicula.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
                 case "Precio":
-
+                    FrmPrecio frmPrecio = new FrmPrecio();
+                    frmPrecio.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
                 case "Reparto":
-
+                    FrmReparto frmReparto = new FrmReparto();
+                    frmReparto.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
                 case "Sala":
-
+                    FrmSala frmSala = new FrmSala();
+                    frmSala.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
                 case "Trailer":
-
+                    FrmTrailer frmTrailer = new FrmTrailer();
+                    frmTrailer.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
             }

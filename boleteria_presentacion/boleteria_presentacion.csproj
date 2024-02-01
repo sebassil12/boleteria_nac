@@ -76,6 +76,30 @@
     <Compile Include="Entidades\Procesos\FrmProcesoPelicula.Designer.cs">
       <DependentUpon>FrmProcesoPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoPrecio.Designer.cs">
+      <DependentUpon>FrmProcesoPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoReparto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoReparto.Designer.cs">
+      <DependentUpon>FrmProcesoReparto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoSala.Designer.cs">
+      <DependentUpon>FrmProcesoSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoTrailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoTrailer.Designer.cs">
+      <DependentUpon>FrmProcesoTrailer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Vista\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +130,30 @@
     <Compile Include="Entidades\Vista\FrmPelicula.Designer.cs">
       <DependentUpon>FrmPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Vista\FrmPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmPrecio.Designer.cs">
+      <DependentUpon>FrmPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmReparto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmReparto.Designer.cs">
+      <DependentUpon>FrmReparto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmSala.Designer.cs">
+      <DependentUpon>FrmSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmTrailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmTrailer.Designer.cs">
+      <DependentUpon>FrmTrailer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +177,18 @@
     <EmbeddedResource Include="Entidades\Procesos\FrmProcesoPelicula.resx">
       <DependentUpon>FrmProcesoPelicula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoPrecio.resx">
+      <DependentUpon>FrmProcesoPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoReparto.resx">
+      <DependentUpon>FrmProcesoReparto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoSala.resx">
+      <DependentUpon>FrmProcesoSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoTrailer.resx">
+      <DependentUpon>FrmProcesoTrailer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entidades\Vista\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +203,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entidades\Vista\FrmPelicula.resx">
       <DependentUpon>FrmPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmPrecio.resx">
+      <DependentUpon>FrmPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmReparto.resx">
+      <DependentUpon>FrmReparto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmSala.resx">
+      <DependentUpon>FrmSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmTrailer.resx">
+      <DependentUpon>FrmTrailer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

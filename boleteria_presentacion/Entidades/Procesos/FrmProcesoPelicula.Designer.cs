@@ -34,12 +34,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtClasificacion = new System.Windows.Forms.TextBox();
+            this.TxtEncargado = new System.Windows.Forms.TextBox();
+            this.TxtSala = new System.Windows.Forms.TextBox();
+            this.TxtAnio = new System.Windows.Forms.TextBox();
+            this.BtnAceptar = new System.Windows.Forms.Button();
+            this.Hora = new System.Windows.Forms.NumericUpDown();
+            this.Minuto = new System.Windows.Forms.NumericUpDown();
+            this.Segundo = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Hora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minuto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Segundo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +67,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Duracion";
+            this.label2.Text = "Duración";
             // 
             // label3
             // 
@@ -96,60 +105,116 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Sala";
             // 
-            // textBox1
+            // TxtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.TxtNombre.Location = new System.Drawing.Point(154, 54);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(100, 20);
+            this.TxtNombre.TabIndex = 6;
             // 
-            // textBox2
+            // TxtClasificacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.TxtClasificacion.Location = new System.Drawing.Point(154, 196);
+            this.TxtClasificacion.Name = "TxtClasificacion";
+            this.TxtClasificacion.Size = new System.Drawing.Size(100, 20);
+            this.TxtClasificacion.TabIndex = 7;
             // 
-            // textBox3
+            // TxtEncargado
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 236);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.TxtEncargado.Location = new System.Drawing.Point(154, 236);
+            this.TxtEncargado.Name = "TxtEncargado";
+            this.TxtEncargado.Size = new System.Drawing.Size(100, 20);
+            this.TxtEncargado.TabIndex = 8;
             // 
-            // textBox4
+            // TxtSala
             // 
-            this.textBox4.Location = new System.Drawing.Point(154, 270);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.TxtSala.Location = new System.Drawing.Point(154, 270);
+            this.TxtSala.Name = "TxtSala";
+            this.TxtSala.Size = new System.Drawing.Size(100, 20);
+            this.TxtSala.TabIndex = 9;
             // 
-            // textBox5
+            // TxtAnio
             // 
-            this.textBox5.Location = new System.Drawing.Point(154, 153);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
+            this.TxtAnio.Location = new System.Drawing.Point(154, 153);
+            this.TxtAnio.Name = "TxtAnio";
+            this.TxtAnio.Size = new System.Drawing.Size(100, 20);
+            this.TxtAnio.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // BtnAceptar
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(154, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.BtnAceptar.Location = new System.Drawing.Point(344, 302);
+            this.BtnAceptar.Name = "BtnAceptar";
+            this.BtnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.BtnAceptar.TabIndex = 12;
+            this.BtnAceptar.Text = "Aceptar";
+            this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
+            // 
+            // Hora
+            // 
+            this.Hora.Location = new System.Drawing.Point(154, 107);
+            this.Hora.Name = "Hora";
+            this.Hora.Size = new System.Drawing.Size(33, 20);
+            this.Hora.TabIndex = 13;
+            // 
+            // Minuto
+            // 
+            this.Minuto.Location = new System.Drawing.Point(235, 107);
+            this.Minuto.Name = "Minuto";
+            this.Minuto.Size = new System.Drawing.Size(33, 20);
+            this.Minuto.TabIndex = 14;
+            // 
+            // Segundo
+            // 
+            this.Segundo.Location = new System.Drawing.Point(324, 107);
+            this.Segundo.Name = "Segundo";
+            this.Segundo.Size = new System.Drawing.Size(33, 20);
+            this.Segundo.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(193, 114);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Horas";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(274, 114);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Minutos";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(364, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Segundos";
             // 
             // FrmProcesoPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 337);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Segundo);
+            this.Controls.Add(this.Minuto);
+            this.Controls.Add(this.Hora);
+            this.Controls.Add(this.BtnAceptar);
+            this.Controls.Add(this.TxtAnio);
+            this.Controls.Add(this.TxtSala);
+            this.Controls.Add(this.TxtEncargado);
+            this.Controls.Add(this.TxtClasificacion);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -158,6 +223,10 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmProcesoPelicula";
             this.Text = "FrmProcesoPelicula";
+            this.Load += new System.EventHandler(this.FrmProcesoPelicula_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Hora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minuto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Segundo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,11 +240,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtClasificacion;
+        private System.Windows.Forms.TextBox TxtEncargado;
+        private System.Windows.Forms.TextBox TxtSala;
+        private System.Windows.Forms.TextBox TxtAnio;
+        private System.Windows.Forms.Button BtnAceptar;
+        private System.Windows.Forms.NumericUpDown Hora;
+        private System.Windows.Forms.NumericUpDown Minuto;
+        private System.Windows.Forms.NumericUpDown Segundo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

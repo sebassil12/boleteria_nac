@@ -91,7 +91,7 @@ namespace boleteria_acceso_datos.DAO
                 pelicula.Anio = transaccion.GetInt32(3);
                 pelicula.Clasificacion = transaccion.GetString(4);
                 pelicula.IdEncargado = transaccion.GetInt32(5);
-                pelicula.IdPelicula = transaccion.GetInt32(6);
+                pelicula.IdSala = transaccion.GetInt32(6);
                 transaccion.Close();
                 conexion.CerrarConexion();
 

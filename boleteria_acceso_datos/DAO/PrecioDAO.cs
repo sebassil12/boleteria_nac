@@ -81,7 +81,7 @@ namespace boleteria_acceso_datos.DAO
 
                 Precio precio = new Precio();
                 precio.IdPrecio = transaccion.GetInt32(0);
-                precio.Valor = transaccion.GetInt32(1);
+                precio.Valor = transaccion.GetDecimal(1);
                 precio.Fecha = transaccion.GetDateTime(2);
                 transaccion.Close();
                 conexion.CerrarConexion();

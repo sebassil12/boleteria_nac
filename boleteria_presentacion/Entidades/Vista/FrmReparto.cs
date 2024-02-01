@@ -12,60 +12,60 @@ using System.Windows.Forms;
 
 namespace boleteria_presentacion.Entidades.Vista
 {
-    public partial class FrmPelicula : Form
+    public partial class FrmReparto : Form
     {
-        private PeliculaLogica peliculaLogica = new PeliculaLogica();
-        public FrmPelicula()
+        RepartoLogica repartoLogica = new RepartoLogica();
+        public FrmReparto()
         {
             InitializeComponent();
+        }
+        private new void Refresh()
+        {
+            DataTable dt = repartoLogica.ListarReparto();
+            DgvReparto.DataSource = dt;
+
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            FrmProcesoPelicula frmProcesoPelicula = new FrmProcesoPelicula();
-            frmProcesoPelicula.ShowDialog();
+            FrmProcesoReparto frmProcesoReparto = new FrmProcesoReparto();
+            frmProcesoReparto.ShowDialog();
             Refresh();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            int? Id = GetIdPelicula();
-            FrmProcesoPelicula frmProcesoPelicula = new FrmProcesoPelicula((int)Id);
-            frmProcesoPelicula.ShowDialog();
+            int? Id = GetIdReparto();
+            FrmProcesoReparto frmProcesoReparto = new FrmProcesoReparto(Id);
+            frmProcesoReparto.ShowDialog();
             Refresh();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            int? Id = GetIdPelicula();
+            int? Id = GetIdReparto();
             try
             {
-                peliculaLogica.EliminarPelicula((int)Id);
+                repartoLogica.EliminarReparto((int)Id);
             }catch(Exception ex)
             {
-                throw new Exception("Error al eliminar pelicula" + ex.Message);
+                throw new Exception("Error al eliminar el reparto: " + ex.Message);
             }
             Refresh();
         }
 
-        private void FrmPelicula_Load(object sender, EventArgs e)
+        private void FrmReparto_Load(object sender, EventArgs e)
         {
             Refresh();
         }
 
-        private new void Refresh()
-        {
-            DataTable dt = peliculaLogica.ListarPelicula();
-            DgvPelicula.DataSource = dt;
-        }
-
         #region HELPER
-        private int? GetIdPelicula()
+        private int? GetIdReparto()
         {
             try
             {
 
-                return int.Parse(DgvPelicula.Rows[DgvPelicula.CurrentRow.Index].Cells[0].Value.ToString());
+                return int.Parse(DgvReparto.Rows[DgvReparto.CurrentRow.Index].Cells[0].Value.ToString());
             }
             catch
             {

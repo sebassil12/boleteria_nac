@@ -1,6 +1,6 @@
 ﻿namespace boleteria_presentacion.Entidades.Vista
 {
-    partial class FrmPelicula
+    partial class FrmSala
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvPelicula = new System.Windows.Forms.DataGridView();
+            this.DgvSala = new System.Windows.Forms.DataGridView();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPelicula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSala)).BeginInit();
             this.SuspendLayout();
             // 
-            // DgvPelicula
+            // DgvSala
             // 
-            this.DgvPelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPelicula.Location = new System.Drawing.Point(72, 113);
-            this.DgvPelicula.Name = "DgvPelicula";
-            this.DgvPelicula.ReadOnly = true;
-            this.DgvPelicula.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvPelicula.Size = new System.Drawing.Size(275, 150);
-            this.DgvPelicula.TabIndex = 0;
+            this.DgvSala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvSala.Location = new System.Drawing.Point(52, 72);
+            this.DgvSala.Name = "DgvSala";
+            this.DgvSala.ReadOnly = true;
+            this.DgvSala.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvSala.Size = new System.Drawing.Size(291, 227);
+            this.DgvSala.TabIndex = 0;
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.Location = new System.Drawing.Point(72, 64);
+            this.BtnNuevo.Location = new System.Drawing.Point(52, 32);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(75, 23);
             this.BtnNuevo.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // BtnEditar
             // 
-            this.BtnEditar.Location = new System.Drawing.Point(170, 64);
+            this.BtnEditar.Location = new System.Drawing.Point(160, 32);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(75, 23);
             this.BtnEditar.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(272, 64);
+            this.BtnEliminar.Location = new System.Drawing.Point(268, 32);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
             this.BtnEliminar.TabIndex = 3;
@@ -75,26 +75,26 @@
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // FrmPelicula
+            // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 333);
+            this.ClientSize = new System.Drawing.Size(394, 328);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnNuevo);
-            this.Controls.Add(this.DgvPelicula);
-            this.Name = "FrmPelicula";
-            this.Text = "FrmPelicula";
-            this.Load += new System.EventHandler(this.FrmPelicula_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPelicula)).EndInit();
+            this.Controls.Add(this.DgvSala);
+            this.Name = "FrmSala";
+            this.Text = "FrmSala";
+            this.Load += new System.EventHandler(this.FrmSala_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSala)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DgvPelicula;
+        private System.Windows.Forms.DataGridView DgvSala;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnEliminar;
