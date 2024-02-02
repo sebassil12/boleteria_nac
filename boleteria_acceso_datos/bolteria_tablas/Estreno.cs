@@ -8,9 +8,9 @@ namespace boleteria_acceso_datos.bolteria_tablas
 {
     public class Estreno
     {
-        private int idEstreno { get; set; }
-        private string sinopsis { get; set; }
-        private int idFechaTentativa { get; set; }
-        private int idTrailer { get; set; }
+        public int idEstreno { get; set; }
+        public string sinopsis { get; set; }
+        public int idFechaTentativa { get; set; }
+        public int idTrailer { get; set; }
     }
 }

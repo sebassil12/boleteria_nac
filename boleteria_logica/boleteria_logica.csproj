@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteEstrenoLogica.cs" />
     <Compile Include="ClienteLogica.cs" />
+    <Compile Include="DescripcionEntradaLogica.cs" />
+    <Compile Include="EntradaLogica.cs" />
+    <Compile Include="EstrenoLogica.cs" />
     <Compile Include="FormaPagoLogica.cs" />
     <Compile Include="FechaTentativaLogica.cs" />
     <Compile Include="PeliculaLogica.cs" />

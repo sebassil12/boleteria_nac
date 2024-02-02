@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace boleteria_acceso_datos.bolteria_tablas
 {
-    public class Cliente_Estreno
+    public class ClienteEstreno
     {
-        private int IdCliente { get; set; }
-        private int IdEstreno { get; set; }
+        public int IdCliente { get; set; }
+        public int IdEstreno { get; set; }
     }
 }

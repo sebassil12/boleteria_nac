@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bolteria_tablas\Cliente.cs" />
-    <Compile Include="bolteria_tablas\Cliente_Estreno.cs" />
-    <Compile Include="bolteria_tablas\Descripcion_Entrada.cs" />
+    <Compile Include="bolteria_tablas\ClienteEstreno.cs" />
+    <Compile Include="bolteria_tablas\DescripcionEntrada.cs" />
     <Compile Include="bolteria_tablas\Encargado.cs" />
     <Compile Include="bolteria_tablas\Entrada.cs" />
     <Compile Include="bolteria_tablas\Estreno.cs" />
@@ -55,6 +55,10 @@
     <Compile Include="bolteria_tablas\Sala.cs" />
     <Compile Include="bolteria_tablas\Trailer.cs" />
     <Compile Include="ConexionDB.cs" />
+    <Compile Include="DAO\ClienteEstrenoDAO.cs" />
+    <Compile Include="DAO\DescripcionEntradaDAO.cs" />
+    <Compile Include="DAO\EntradaDAO.cs" />
+    <Compile Include="DAO\EstrenoDAO.cs" />
     <Compile Include="DAO\FechaTentativaDAO.cs" />
     <Compile Include="DAO\EncargadoDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />

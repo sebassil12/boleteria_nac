@@ -8,9 +8,9 @@ namespace boleteria_acceso_datos.bolteria_tablas
 {
     public class Entrada
     {
-        private int codugo { get; set; }
-        private int idPelicula { get; set; }
-        private int idFormaPago { get; set; }
+        public int codigo { get; set; }
+        public int idPelicula { get; set; }
+        public int idFormaPago { get; set; }
 
     }
 }
