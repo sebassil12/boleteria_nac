@@ -39,6 +39,27 @@ namespace boleteria_presentacion
                     frmEncargado.ShowDialog();
                     CmbMain.SelectedIndex = -1;
                     break;
+                case "Cliente_Estreno":
+                    FrmClienteEstreno frmClienteEstreno = new FrmClienteEstreno();
+                    frmClienteEstreno.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Descripcion_Entrada":
+                    FrmDescripcionEntrada frmDescripcionEntrada = new FrmDescripcionEntrada();
+                    frmDescripcionEntrada.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Entrada":
+                    FrmEntrada frmEntrada = new FrmEntrada();
+                    frmEntrada.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+                case "Estreno":
+                    FrmEstreno frmEstreno = new FrmEstreno();
+                    frmEstreno.ShowDialog();
+                    CmbMain.SelectedIndex = -1;
+                    break;
+
                 //Insertar los casos restantes
                 case "Fecha Tentativa":
                     FrmFechaTentativa frmFechaTentativa = new FrmFechaTentativa();

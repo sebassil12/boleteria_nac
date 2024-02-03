@@ -1,6 +1,6 @@
 ﻿namespace boleteria_presentacion.Entidades.Vista
 {
-    partial class FrmClienteEstreno
+    partial class FrmDescripcionEntrada
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvClienteEstreno = new System.Windows.Forms.DataGridView();
+            this.DgvDescripcionEntrada = new System.Windows.Forms.DataGridView();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvClienteEstreno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvDescripcionEntrada)).BeginInit();
             this.SuspendLayout();
             // 
-            // DgvClienteEstreno
+            // DgvDescripcionEntrada
             // 
-            this.DgvClienteEstreno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvClienteEstreno.Location = new System.Drawing.Point(53, 71);
-            this.DgvClienteEstreno.Name = "DgvClienteEstreno";
-            this.DgvClienteEstreno.ReadOnly = true;
-            this.DgvClienteEstreno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvClienteEstreno.Size = new System.Drawing.Size(299, 237);
-            this.DgvClienteEstreno.TabIndex = 0;
+            this.DgvDescripcionEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvDescripcionEntrada.Location = new System.Drawing.Point(72, 87);
+            this.DgvDescripcionEntrada.Name = "DgvDescripcionEntrada";
+            this.DgvDescripcionEntrada.ReadOnly = true;
+            this.DgvDescripcionEntrada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvDescripcionEntrada.Size = new System.Drawing.Size(327, 222);
+            this.DgvDescripcionEntrada.TabIndex = 0;
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.Location = new System.Drawing.Point(53, 28);
+            this.BtnNuevo.Location = new System.Drawing.Point(72, 40);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(75, 23);
             this.BtnNuevo.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // BtnEditar
             // 
-            this.BtnEditar.Location = new System.Drawing.Point(171, 28);
+            this.BtnEditar.Location = new System.Drawing.Point(195, 40);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(75, 23);
             this.BtnEditar.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(277, 28);
+            this.BtnEliminar.Location = new System.Drawing.Point(324, 40);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
             this.BtnEliminar.TabIndex = 3;
@@ -75,26 +75,26 @@
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // FrmClienteEstreno
+            // FrmDescripcionEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 367);
+            this.ClientSize = new System.Drawing.Size(489, 342);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnNuevo);
-            this.Controls.Add(this.DgvClienteEstreno);
-            this.Name = "FrmClienteEstreno";
-            this.Text = "FrmClienteEstreno";
-            this.Load += new System.EventHandler(this.FrmClienteEstreno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvClienteEstreno)).EndInit();
+            this.Controls.Add(this.DgvDescripcionEntrada);
+            this.Name = "FrmDescripcionEntrada";
+            this.Text = "FrmDescripcionEntrada";
+            this.Load += new System.EventHandler(this.FrmDescripcionEntrada_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvDescripcionEntrada)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DgvClienteEstreno;
+        private System.Windows.Forms.DataGridView DgvDescripcionEntrada;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnEliminar;

@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Procesos\FrmProcesoClienteEstreno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoClienteEstreno.Designer.cs">
+      <DependentUpon>FrmProcesoClienteEstreno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoDescripcionEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoDescripcionEntrada.Designer.cs">
+      <DependentUpon>FrmProcesoDescripcionEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoEntrada.Designer.cs">
+      <DependentUpon>FrmProcesoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoEstreno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Procesos\FrmProcesoEstreno.Designer.cs">
+      <DependentUpon>FrmProcesoEstreno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Procesos\FrmProcesoFechaTentativa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +136,29 @@
     <Compile Include="Entidades\Vista\FrmClienteEstreno.Designer.cs">
       <DependentUpon>FrmClienteEstreno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Vista\FrmDescripcionEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmDescripcionEntrada.Designer.cs">
+      <DependentUpon>FrmDescripcionEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Vista\FrmEncargado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Entidades\Vista\FrmEncargado.Designer.cs">
       <DependentUpon>FrmEncargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmEntrada.Designer.cs">
+      <DependentUpon>FrmEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmEstreno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entidades\Vista\FrmEstreno.Designer.cs">
+      <DependentUpon>FrmEstreno.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Vista\FrmFechaTentativa.cs">
       <SubType>Form</SubType>
@@ -168,6 +210,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoClienteEstreno.resx">
+      <DependentUpon>FrmProcesoClienteEstreno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoDescripcionEntrada.resx">
+      <DependentUpon>FrmProcesoDescripcionEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoEntrada.resx">
+      <DependentUpon>FrmProcesoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Procesos\FrmProcesoEstreno.resx">
+      <DependentUpon>FrmProcesoEstreno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entidades\Procesos\FrmProcesoFechaTentativa.resx">
       <DependentUpon>FrmProcesoFechaTentativa.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,8 +255,17 @@
     <EmbeddedResource Include="Entidades\Vista\FrmClienteEstreno.resx">
       <DependentUpon>FrmClienteEstreno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmDescripcionEntrada.resx">
+      <DependentUpon>FrmDescripcionEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Entidades\Vista\FrmEncargado.resx">
       <DependentUpon>FrmEncargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmEntrada.resx">
+      <DependentUpon>FrmEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entidades\Vista\FrmEstreno.resx">
+      <DependentUpon>FrmEstreno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entidades\Vista\FrmFechaTentativa.resx">
       <DependentUpon>FrmFechaTentativa.cs</DependentUpon>
